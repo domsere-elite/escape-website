@@ -874,7 +874,7 @@
                         build timeline.
                     </p>
                 </div>
-                <form id="form" name="consultation" method="POST" action="/?submitted=true#form" data-netlify="true" netlify
+                <form id="form" name="consultation" method="POST" action="/" data-netlify="true" netlify
                     data-netlify-honeypot="bot-field"
                     class="glass-card rounded-3xl p-5 md:p-6 shadow-xl" style="scroll-margin-top: 140px;">
                     <div class="grid grid-cols-1 gap-3">
@@ -976,20 +976,34 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            var params = new URLSearchParams(window.location.search);
             var successModal = document.getElementById('form-success');
             var closeBtn = document.getElementById('success-close');
-
-            if (params.get('submitted') === 'true' && successModal) {
-                successModal.classList.remove('is-hidden');
-            }
+            var form = document.getElementById('form');
 
             if (closeBtn && successModal) {
                 closeBtn.addEventListener('click', function () {
                     successModal.classList.add('is-hidden');
-                    params.delete('submitted');
-                    var newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
-                    window.history.replaceState({}, document.title, newUrl);
+                });
+            }
+
+            if (form && successModal) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    var formData = new FormData(form);
+
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                        .then(function () {
+                            successModal.classList.remove('is-hidden');
+                            form.reset();
+                        })
+                        .catch(function () {
+                            form.submit();
+                        });
                 });
             }
         });
