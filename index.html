@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -452,7 +452,7 @@
                         </svg>
                     </div>
                     <p class="text-slate-600 font-body mb-6 italic leading-relaxed">"Escape Pools didn't just build us a
-                        pool—they created our family's favorite place. The attention to detail and dedicated site
+                        pool - they created our family's favorite place. The attention to detail and dedicated site
                         supervision made all the difference. Worth every penny."</p>
                     <div class="border-t border-slate-200 pt-4 flex items-center gap-3">
                         <div class="accent-dot"></div>
@@ -493,7 +493,7 @@
                         </svg>
                     </div>
                     <p class="text-slate-600 font-body mb-6 italic leading-relaxed">"The 30-45 day timeline wasn't
-                        marketing talk—it was reality. Escape Pools delivered on time with zero compromises on
+                        marketing talk - it was reality. Escape Pools delivered on time with zero compromises on
                         craftsmanship. Highly recommend!"</p>
                     <div class="border-t border-slate-200 pt-4 flex items-center gap-3">
                         <div class="accent-dot"></div>
@@ -1031,24 +1031,6 @@
                 });
             };
 
-            var buildSuccessUrl = function (baseUrl, extras) {
-                var url = new URL(baseUrl, window.location.origin);
-                trackingKeys.forEach(function (key) {
-                    var value = readTrackingValue(key);
-                    if (value) {
-                        url.searchParams.set(key, value);
-                    }
-                });
-
-                Object.keys(extras || {}).forEach(function (key) {
-                    if (extras[key]) {
-                        url.searchParams.set(key, extras[key]);
-                    }
-                });
-
-                return url.toString();
-            };
-
             var handleFormSubmit = function (form) {
                 if (!form) return;
                 applyTrackingFields(form);
@@ -1063,10 +1045,7 @@
                     })
                         .then(function () {
                             form.reset();
-                            window.location.assign(buildSuccessUrl(successUrl, {
-                                submitted: '1',
-                                cta: formData.get('cta_source') || 'site-form'
-                            }));
+                            window.location.assign(successUrl);
                         })
                         .catch(function () {
                             form.submit();
