@@ -20,16 +20,16 @@
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Request Received</p>
             <h1 class="mt-4 font-serif text-4xl font-bold sm:text-5xl">Your consultation request is in.</h1>
             <p class="mt-6 max-w-2xl text-lg text-slate-200">
-                Escape Pools received your form submission. The current build does not route this into a CRM yet, so the primary capture point is your Netlify form submission inbox.
+                Thank you for reaching out. A member of the Escape Pools team will review your project details and follow up to schedule the next step.
             </p>
             <div class="mt-8 grid gap-4 sm:grid-cols-2">
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">Next Step</p>
-                    <p class="mt-2 text-slate-200">Follow up from the team should happen manually from the submission details captured with the form.</p>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">What Happens Next</p>
+                    <p class="mt-2 text-slate-200">We’ll review your goals, budget range, and project notes, then reach out to coordinate your consultation.</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">Need Immediate Contact?</p>
-                    <p class="mt-2 text-slate-200">Call now if you want to move faster or confirm receipt.</p>
+                    <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">Prefer To Talk Now?</p>
+                    <p class="mt-2 text-slate-200">If you want to move faster, call us directly and we’ll help you get the conversation started.</p>
                 </div>
             </div>
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -42,5 +42,10 @@
             </div>
         </div>
     </main>
+    <script>
+        if (window.location.search) {
+            window.history.replaceState({}, document.title, '/consultation-confirmation/');
+        }
+    </script>
 </body>
 </html>
