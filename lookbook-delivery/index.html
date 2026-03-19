@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download the Escape Pools 2026 lookbook.">
+    <title>Lookbook Delivery | Escape Pools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900" style="font-family: Inter, sans-serif;">
+    <main class="mx-auto flex min-h-screen max-w-5xl items-center px-6 py-16">
+        <div class="grid w-full gap-8 rounded-[2rem] bg-white p-8 shadow-2xl sm:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em]" style="color:#0e7490;">Instant Access</p>
+                <h1 class="mt-4 font-serif text-4xl font-bold sm:text-5xl">Your 2026 lookbook is ready.</h1>
+                <p class="mt-5 max-w-2xl text-lg text-slate-600">
+                    The download should start automatically. If it doesn’t, use the download button below or preview the lookbook in-browser.
+                </p>
+                <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                    <a id="download-link" href="/assets/escape-pools-2026-lookbook.pdf" download="escape-pools-2026-lookbook.pdf" class="inline-flex items-center justify-center rounded-full px-6 py-4 text-center font-bold text-white shadow-lg" style="background:#0e7490;">
+                        Download Lookbook PDF
+                    </a>
+                    <a href="/lookbook/" class="inline-flex items-center justify-center rounded-full border border-slate-200 px-6 py-4 text-center font-bold text-slate-900">
+                        Preview Online
+                    </a>
+                </div>
+                <div class="mt-6">
+                    <a href="/schedule-consultation/?cta=lookbook-delivery" class="font-semibold underline" style="color:#0e7490;">Prefer to talk through your project next? Schedule a consultation.</a>
+                </div>
+            </div>
+            <div class="overflow-hidden rounded-[1.75rem] bg-slate-950 shadow-xl">
+                <img src="/realresults/realresults-hero.jpg" alt="Escape Pools completed project" class="h-full w-full object-cover">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var link = document.getElementById('download-link');
+            if (!link) return;
+
+            window.setTimeout(function () {
+                link.click();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
