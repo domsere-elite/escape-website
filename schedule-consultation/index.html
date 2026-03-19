@@ -179,7 +179,14 @@
 
             if (!form) return;
 
-            var ctaSource = queryParams.get('cta') || 'schedule-page';
+            var ctaSource = queryParams.get('cta');
+            if (!ctaSource) {
+                try {
+                    ctaSource = window.localStorage.getItem('escape_consultation_cta') || 'schedule-page';
+                } catch (error) {
+                    ctaSource = 'schedule-page';
+                }
+            }
             var ctaInput = document.getElementById('cta-source');
             if (ctaInput) {
                 ctaInput.value = ctaSource;

@@ -28,7 +28,7 @@
                     </a>
                 </div>
                 <div class="mt-6">
-                    <a href="/schedule-consultation/?cta=lookbook-delivery" class="font-semibold underline" style="color:#0e7490;">Prefer to talk through your project next? Schedule a consultation.</a>
+                    <a href="/schedule-consultation/" id="lookbook-consultation-link" class="font-semibold underline" style="color:#0e7490;">Prefer to talk through your project next? Schedule a consultation.</a>
                 </div>
             </div>
             <div class="overflow-hidden rounded-[1.75rem] bg-slate-950 shadow-xl">
@@ -40,7 +40,17 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             var link = document.getElementById('download-link');
+            var consultationLink = document.getElementById('lookbook-consultation-link');
             if (!link) return;
+
+            if (consultationLink) {
+                consultationLink.addEventListener('click', function () {
+                    try {
+                        window.localStorage.setItem('escape_consultation_cta', 'lookbook-delivery');
+                    } catch (error) {
+                    }
+                });
+            }
 
             window.setTimeout(function () {
                 link.click();

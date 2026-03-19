@@ -292,7 +292,7 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         (832) 856-3400
                     </a>
-                    <a href="/schedule-consultation/?cta=nav-primary"
+                    <a href="/schedule-consultation/" data-consultation-cta="nav-primary"
                         class="btn-shimmer bg-action-gold hover:bg-amber-500 text-white font-bold py-3 px-6 rounded-full text-sm">
                         Schedule Consultation
                     </a>
@@ -322,7 +322,7 @@
                     class="block text-slate-700 hover:text-brand-teal font-medium">On-Time Promise</a>
                 <a href="#about" @click="mobileMenuOpen=false"
                     class="block text-slate-700 hover:text-brand-teal font-medium">About</a>
-                <a href="/schedule-consultation/?cta=mobile-menu" @click="mobileMenuOpen=false"
+                <a href="/schedule-consultation/" data-consultation-cta="mobile-menu" @click="mobileMenuOpen=false"
                     class="block w-full text-center bg-action-gold text-white font-bold py-3 px-8 rounded-full">Schedule Consultation</a>
             </div>
         </div>
@@ -387,7 +387,7 @@
                     </span>
                 </a>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in fade-in-delay-2">
-                    <a href="/schedule-consultation/?cta=hero-primary"
+                    <a href="/schedule-consultation/" data-consultation-cta="hero-primary"
                         class="btn-shimmer bg-action-gold hover:bg-amber-500 text-white font-bold py-5 px-12 rounded-full text-xl shadow-xl w-full sm:w-auto">
                         Schedule Consultation
                     </a>
@@ -799,7 +799,7 @@
                 Now accepting consultations for <span class="text-brand-teal font-semibold"
                     x-text="'Spring/Summer builds'"></span>.
             </p>
-            <a href="/schedule-consultation/?cta=quote-primary"
+            <a href="/schedule-consultation/" data-consultation-cta="quote-primary"
                 class="btn-shimmer bg-action-gold hover:bg-amber-500 text-white font-bold py-5 px-16 rounded-full text-xl shadow-2xl mb-8 inline-block">
                 Schedule Consultation
             </a>
@@ -883,7 +883,7 @@
                 Join our 2026 build schedule. We'll handle everything from design to permitting and project supervision.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="/schedule-consultation/?cta=contact-primary"
+                <a href="/schedule-consultation/" data-consultation-cta="contact-primary"
                     class="btn-shimmer bg-action-gold hover:bg-amber-500 text-white font-bold py-5 px-12 rounded-full text-xl shadow-xl w-full sm:w-auto">
                     Schedule Consultation
                 </a>
@@ -1069,6 +1069,15 @@
                         });
                 });
             };
+
+            document.querySelectorAll('[data-consultation-cta]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    try {
+                        window.localStorage.setItem('escape_consultation_cta', link.getAttribute('data-consultation-cta') || 'schedule-page');
+                    } catch (error) {
+                    }
+                });
+            });
 
             document.querySelectorAll('[data-lookbook-cta]').forEach(function (button) {
                 button.addEventListener('click', function () {
