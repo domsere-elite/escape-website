@@ -1096,6 +1096,48 @@
         });
     </script>
 
+    <!-- Netlify fallback forms for build-time detection -->
+    <form name="consultation" data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="consultation">
+        <input name="bot-field">
+        <input name="name">
+        <input name="phone">
+        <input name="email">
+        <input name="budget">
+        <textarea name="message"></textarea>
+        <input name="submission_context">
+        <input name="page_path">
+        <input name="page_title">
+        <input name="cta_source">
+        <input name="utm_source">
+        <input name="utm_medium">
+        <input name="utm_campaign">
+        <input name="utm_term">
+        <input name="utm_content">
+        <input name="gclid">
+        <input name="gbraid">
+        <input name="wbraid">
+    </form>
+
+    <form name="lookbook" data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="lookbook">
+        <input name="bot-field">
+        <input name="name">
+        <input name="email">
+        <input name="submission_context">
+        <input name="page_path">
+        <input name="page_title">
+        <input name="cta_source">
+        <input name="utm_source">
+        <input name="utm_medium">
+        <input name="utm_campaign">
+        <input name="utm_term">
+        <input name="utm_content">
+        <input name="gclid">
+        <input name="gbraid">
+        <input name="wbraid">
+    </form>
+
     <!-- Sticky Mobile Call Button -->
     <div class="fixed bottom-6 right-6 z-50 md:hidden">
         <a href="tel:8328563400" aria-label="Call Escape Pools at 832-856-3400" title="Call Escape Pools" class="flex items-center justify-center w-14 h-14 bg-brand-teal text-white rounded-full shadow-2xl hover:bg-cyan-700 transition-all duration-300">
