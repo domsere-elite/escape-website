@@ -1,0 +1,11 @@
+{
+  "name": "escape-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx tailwindcss -c tailwind.config.js -i ./src/tailwind.css -o ./assets/site.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

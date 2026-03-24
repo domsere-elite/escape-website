@@ -2,3 +2,10 @@
 index_v1_backup.html
 design_system.txt
 design_system_output.txt
+node_modules/
+.playwright-cli/
+output/
+live-*.html
+*-optimized.png
+*-optimized-1000.png
+favicon-source.png
