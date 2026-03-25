@@ -362,7 +362,7 @@
                         </svg>
                     </span>
                 </a>
-                <form id="hero-consultation-form" name="consultation" method="POST" action="/consultation-confirmation/" data-success-url="/consultation-confirmation/" data-netlify="true" netlify data-netlify-honeypot="bot-field" class="mx-auto mt-4 grid max-w-4xl gap-2.5 text-left fade-in fade-in-delay-2 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.15fr_auto]">
+                <form id="hero-consultation-form" name="consultation" method="POST" action="/consultation-confirmation/" data-success-url="/consultation-confirmation/" data-netlify="true" netlify data-netlify-honeypot="bot-field" class="mx-auto mt-4 grid max-w-5xl gap-2.5 text-left fade-in fade-in-delay-2 sm:grid-cols-2 lg:grid-cols-[0.95fr_0.95fr_1.2fr_auto] lg:gap-3 lg:items-end">
                     <input type="hidden" name="form-name" value="consultation">
                     <input type="hidden" name="submission_context" value="homepage-hero-consultation">
                     <input type="hidden" name="page_path" value="/">
@@ -379,16 +379,16 @@
                     <p class="hidden"><label><input name="bot-field"></label></p>
 
                     <div>
-                        <label class="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500" for="hero-name">Name</label>
-                        <input id="hero-name" name="name" type="text" required autocomplete="name" autocapitalize="words" placeholder="John Doe" class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-2.5 text-base text-brand-dark outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
+                        <label class="mb-1 block whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500" for="hero-name">Name</label>
+                        <input id="hero-name" name="name" type="text" required autocomplete="name" autocapitalize="words" placeholder="John Doe" class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-3 text-base text-brand-dark outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
                     </div>
                     <div>
-                        <label class="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500" for="hero-phone">Phone Number</label>
-                        <input id="hero-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-2.5 text-base text-brand-dark outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
+                        <label class="mb-1 block whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500" for="hero-phone">Phone Number</label>
+                        <input id="hero-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-3 text-base text-brand-dark outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
                     </div>
                     <div class="sm:col-span-2 lg:col-span-1">
-                        <label class="mb-1 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500" for="hero-message">What are you looking for?</label>
-                        <select id="hero-message" name="message" required class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-2.5 text-base text-slate-700 outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
+                        <label class="mb-1 block whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500" for="hero-message">What are you looking for?</label>
+                        <select id="hero-message" name="message" required class="w-full rounded-2xl border border-white/60 bg-white/90 px-4 py-3 text-base text-slate-700 outline-none transition-all focus:border-transparent focus:ring-2 focus:ring-brand-teal">
                             <option value="" selected disabled>Select one...</option>
                             <option>New Pool Installation</option>
                             <option>Pool + Outdoor Living</option>
@@ -396,7 +396,7 @@
                         </select>
                     </div>
                     <div class="sm:col-span-2 lg:col-span-1 lg:self-end">
-                        <button type="submit" class="btn-shimmer w-full whitespace-nowrap rounded-2xl bg-action-gold px-6 py-3 text-base font-bold text-white shadow-xl transition hover:bg-amber-500 sm:text-lg">
+                        <button type="submit" class="btn-shimmer w-full whitespace-nowrap rounded-2xl bg-action-gold px-6 py-3 text-base font-bold text-white shadow-xl transition hover:bg-amber-500 lg:min-h-[52px] sm:text-lg">
                             Get My Free Consultation
                         </button>
                     </div>
