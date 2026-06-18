@@ -163,10 +163,15 @@
     .rev-g { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ink-soft); margin-top: 12px; }
     .rev-g img { width: 12px; height: 12px; display: inline; }
 
-    /* GALLERY — editorial feature grid */
-    .gal { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .gal figure { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 4/3; }
-    .gal figure img { width: 100%; height: 100%; object-fit: cover; }
+    /* WORK — alternating editorial feature blocks */
+    .feat { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; margin-top: 30px; }
+    .feat + .feat { margin-top: 40px; }
+    .feat-fig { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 16px 38px rgba(22,40,47,0.1); }
+    .feat-fig img { width: 100%; height: 290px; object-fit: cover; }
+    .feat-tag { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lake); margin-bottom: 9px; }
+    .feat-body h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2rem); line-height: 1.12; margin-bottom: 9px; }
+    .feat-body h3 em { font-style: italic; color: var(--lake-deep); }
+    .feat-body p { font-size: 15px; color: var(--ink-soft); max-width: 470px; }
 
     /* PROCESS — timeline */
     .timeline { margin-top: 30px; }
@@ -230,8 +235,10 @@
       .why-row { border-bottom: 1px solid var(--line); }
       .owner-grid { grid-template-columns: 0.85fr 1.15fr; }
       .reviews { grid-template-columns: repeat(3, 1fr); }
-      .gal { grid-template-columns: repeat(3, 1fr); }
-      .gal figure.feature { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+      .feat { grid-template-columns: 1fr 1fr; gap: 52px; }
+      .feat + .feat { margin-top: 64px; }
+      .feat.rev .feat-fig { order: 2; }
+      .feat-fig img { height: 370px; }
       .band { grid-template-columns: 1fr 1fr; }
       .mbar { display: none; }
     }
@@ -398,17 +405,37 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- WORK — alternating editorial feature blocks -->
 <section class="s paper2">
   <div class="wrap">
     <div class="kicker">Recent work</div>
-    <h2 class="h-sec">Custom pools &amp; outdoor living.</h2>
-    <div class="gal">
-      <figure class="feature"><img src="/realresults/Screenshot%202026-02-02%20135927.webp" alt="Custom pool near Lake Conroe" loading="lazy" /></figure>
-      <figure><img src="/realresults/Screenshot%202026-02-02%20135013.webp" alt="Custom pool build, Montgomery County" loading="lazy" /></figure>
-      <figure><img src="/assets/legacy-gallery/legacy-dusk-cabana.jpg" alt="Luxury pool and cabana at dusk" loading="lazy" /></figure>
-      <figure><img src="/realresults/Screenshot%202026-02-02%20135837.webp" alt="Pool patio and outdoor living" loading="lazy" /></figure>
-      <figure><img src="/assets/legacy-gallery/legacy-white-pergola.jpg" alt="Pergola and pool design" loading="lazy" /></figure>
+    <h2 class="h-sec">Custom pools &amp; outdoor living, <em>made for the lake.</em></h2>
+
+    <div class="feat rev">
+      <figure class="feat-fig"><img src="/realresults/Screenshot%202026-02-02%20135927.webp" alt="Custom pool and spa near Lake Conroe" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">Pools &amp; Spas</div>
+        <h3>Shaped to your lot and your view</h3>
+        <p>Raised spas, tanning ledges, negative edges - designed around your slope, your sightlines to the water, and how your family actually wants to use the pool.</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <figure class="feat-fig"><img src="/assets/legacy-gallery/legacy-covered-patio.jpg" alt="Covered patio and outdoor living area" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">Outdoor Living</div>
+        <h3>The whole backyard, <em>under one roof</em></h3>
+        <p>Outdoor kitchens, covered patios, and pergolas built in the same project as your pool - one team, one timeline, one finished space to enjoy.</p>
+      </div>
+    </div>
+
+    <div class="feat rev">
+      <figure class="feat-fig"><img src="/assets/legacy-gallery/legacy-dusk-cabana.jpg" alt="Pool and cabana lit at dusk" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">The Details</div>
+        <h3>Built to glow after sunset</h3>
+        <p>Lighting, water features, and finishes chosen so your backyard looks as good at 9pm as it does at noon - the difference between a pool and an escape.</p>
+      </div>
     </div>
   </div>
 </section>
