@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lake Conroe's owner-led custom pool builder. On-site design, HOA & permits handled, many pools finished in 30-45 days. Serving Walden, Bentwater, April Sound, Montgomery, Willis & the Lake Conroe communities. Free consultation." />
+  <meta name="description" content="Lake Conroe's owner-led custom pool builder. On-site design by Jim, HOA & permits handled, many pools finished in 30-45 days. Serving Walden, Bentwater, April Sound, Montgomery, Willis & the Lake Conroe communities. Free consultation." />
   <title>Lake Conroe Custom Pool Builder | Escape Pools</title>
 
   <!-- Google Analytics -->
@@ -24,271 +24,230 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink: #0c1b26;
-      --ink-2: #12303a;
-      --teal: #1a7a7a;
-      --teal-2: #2a9d9d;
-      --gold: #c4862b;
-      --gold-2: #e6a847;
-      --cream: #f7f3ec;
-      --paper: #ffffff;
-      --muted: #5b6970;
-      --line: #e6e9ea;
+      --paper: #fbf8f2;
+      --paper-2: #f3ede1;
+      --white: #ffffff;
+      --ink: #16282f;
+      --ink-soft: #4d5e64;
+      --lake: #2f7d7d;
+      --lake-deep: #1c5757;
+      --sand: #ece3d3;
+      --line: #e4ddcd;
+      --gold: #bd7f27;
+      --gold-2: #d99a3a;
       --serif: 'Fraunces', Georgia, serif;
       --sans: 'Inter', system-ui, sans-serif;
-      --shadow: 0 24px 60px rgba(8,22,32,0.28);
-      --radius: 18px;
+      --radius: 16px;
     }
 
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: var(--sans);
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.55;
-      overflow-x: hidden;
-    }
+    body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; overflow-x: hidden; }
     img { max-width: 100%; display: block; }
     .hidden, [hidden] { display: none !important; }
     a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
 
     /* ── HEADER ── */
     .hdr {
       position: fixed; inset: 0 0 auto 0; z-index: 60;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 13px 22px;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(12,27,38,0.07);
+      padding: 14px 22px; background: rgba(251,248,242,0.9);
+      backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
     }
     .hdr img { height: 42px; width: auto; }
     .hdr-call {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--ink); color: #fff; text-decoration: none;
-      padding: 10px 18px; border-radius: 100px;
-      font-weight: 600; font-size: 14px; white-space: nowrap;
+      border: 1.5px solid var(--ink); color: var(--ink); text-decoration: none;
+      padding: 9px 17px; border-radius: 100px; font-weight: 600; font-size: 14px; white-space: nowrap;
+      transition: background .15s, color .15s;
     }
     .hdr-call svg { width: 15px; height: 15px; }
-    .hdr-call:hover { background: var(--teal); }
+    .hdr-call:hover { background: var(--ink); color: #fff; }
 
-    /* ── HERO ── */
-    .hero { position: relative; overflow: hidden; padding: 84px 20px 30px; }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        linear-gradient(180deg, rgba(8,20,28,0.78) 0%, rgba(8,20,28,0.55) 45%, rgba(18,48,58,0.6) 100%),
-        url('/realresults/realresults-hero.webp');
-      background-size: cover; background-position: center 30%;
-      z-index: 0;
-    }
-    .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 1140px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr; gap: 18px;
-    }
-    .hero-copy { color: #fff; max-width: 620px; }
+    /* ── HERO (light editorial) ── */
+    .hero { padding: 92px 0 36px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gold-2);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      padding: 7px 13px; border-radius: 100px;
-      margin-bottom: 14px;
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lake);
+      margin-bottom: 16px;
     }
+    .eyebrow::before { content: ''; width: 26px; height: 1.5px; background: var(--gold); display: inline-block; }
     .hero h1 {
-      font-family: var(--serif); font-weight: 600;
-      font-size: clamp(2.1rem, 7vw, 3.7rem); line-height: 1.04;
-      letter-spacing: -0.01em; margin-bottom: 12px;
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.4rem, 8vw, 4.1rem); line-height: 1.03; letter-spacing: -0.015em; color: var(--ink);
     }
-    .hero h1 .accent { color: var(--gold-2); font-style: italic; }
-    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.86); max-width: 500px; margin-bottom: 18px; }
-    .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 12.5px; font-weight: 600; color: #fff;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.16);
-      padding: 7px 12px; border-radius: 100px;
-    }
-    .chip .gstar { color: #ffce47; letter-spacing: 1px; }
+    .hero h1 em { font-style: italic; color: var(--lake-deep); }
+    .hero-sub { font-size: 16.5px; color: var(--ink-soft); max-width: 460px; margin-top: 18px; }
+    .hero-rating { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; font-size: 13px; color: var(--ink-soft); }
+    .hero-rating .rs { color: #d99a3a; letter-spacing: 2px; font-size: 15px; }
+    .hero-rating b { color: var(--ink); font-weight: 600; }
+    .hero-figure { margin-top: 26px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(22,40,47,0.12); }
+    .hero-figure img { width: 100%; height: 280px; object-fit: cover; object-position: center 35%; }
 
     /* ── FORM CARD ── */
     .form-card {
-      position: relative; z-index: 1;
-      background: var(--paper); border-radius: var(--radius);
-      box-shadow: var(--shadow); padding: 22px 20px;
-      width: 100%; max-width: 460px; scroll-margin-top: 96px;
+      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: 0 16px 44px rgba(22,40,47,0.1); padding: 24px 22px; scroll-margin-top: 92px;
     }
-    .form-card .fc-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-    .form-card h2 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.1; }
-    .fc-badge { font-size: 11px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
-    .form-card .fc-sub { font-size: 13px; color: var(--muted); margin: 6px 0 16px; }
-    .field { margin-bottom: 11px; }
-    .field label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 5px; }
+    .form-card .fc-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+    .form-card h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.1; }
+    .fc-pill { font-size: 11px; font-weight: 700; color: var(--lake); background: rgba(47,125,125,0.1); padding: 5px 10px; border-radius: 100px; white-space: nowrap; }
+    .form-card .fc-sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); margin-bottom: 5px; }
     .field input, .field select {
-      width: 100%; padding: 12px 14px;
-      border: 1.5px solid var(--line); border-radius: 11px;
-      font-family: var(--sans); font-size: 16px; color: var(--ink); background: #fff;
-      transition: border-color .15s, box-shadow .15s; appearance: none; -webkit-appearance: none;
+      width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px;
+      font-family: var(--sans); font-size: 16px; color: var(--ink); background: var(--paper);
+      transition: border-color .15s, box-shadow .15s, background .15s; appearance: none; -webkit-appearance: none;
     }
-    .field input:focus, .field select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(26,122,122,0.13); }
+    .field input::placeholder { color: #9aa6aa; }
+    .field input:focus, .field select:focus { outline: none; border-color: var(--lake); background: #fff; box-shadow: 0 0 0 3px rgba(47,125,125,0.12); }
     .sel { position: relative; }
-    .sel::after { content: '\25BE'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; font-size: 13px; }
+    .sel::after { content: '\25BE'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-soft); pointer-events: none; font-size: 12px; }
     .btn-submit {
-      width: 100%; margin-top: 5px; padding: 15px;
-      border: none; border-radius: 11px; cursor: pointer;
-      background: linear-gradient(180deg, var(--gold-2), var(--gold));
-      color: #fff; font-family: var(--sans); font-size: 16px; font-weight: 700;
-      box-shadow: 0 8px 22px rgba(196,134,43,0.34); transition: transform .12s, filter .15s;
+      width: 100%; margin-top: 5px; padding: 15px; border: none; border-radius: 10px; cursor: pointer;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff;
+      font-family: var(--sans); font-size: 16px; font-weight: 700; letter-spacing: 0.01em;
+      box-shadow: 0 8px 20px rgba(189,127,39,0.3); transition: transform .12s, filter .15s;
     }
-    .btn-submit:hover { transform: translateY(-1px); filter: brightness(1.04); }
-    .fc-note { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 9px; }
+    .btn-submit:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .fc-note { font-size: 11.5px; color: var(--ink-soft); text-align: center; margin-top: 9px; }
     .fc-note strong { color: var(--ink); }
 
-    /* ── TRUST STRIP ── */
-    .trust {
-      background: var(--ink); color: rgba(255,255,255,0.86);
-      display: flex; flex-wrap: wrap; gap: 14px 26px; justify-content: center;
-      padding: 16px 20px; font-size: 13px; font-weight: 500;
-    }
-    .trust span { display: inline-flex; align-items: center; gap: 8px; }
-    .trust svg { width: 16px; height: 16px; color: var(--gold-2); flex-shrink: 0; }
+    /* ── HAIRLINE TRUST ── */
+    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+    .trust .wrap { display: flex; flex-wrap: wrap; gap: 12px 30px; justify-content: center; padding-top: 16px; padding-bottom: 16px; }
+    .trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+    .trust svg { width: 16px; height: 16px; color: var(--lake); flex-shrink: 0; }
 
     /* ── SECTIONS ── */
-    section.s { padding: 52px 20px; }
-    .wrap { max-width: 1080px; margin: 0 auto; }
-    .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
-    .h-sec { font-family: var(--serif); font-weight: 600; font-size: clamp(1.7rem, 4.2vw, 2.5rem); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 12px; }
-    .lead { font-size: 15.5px; color: var(--muted); max-width: 640px; }
-    .cream { background: var(--cream); }
+    section.s { padding: 60px 0; }
+    .kicker { font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lake); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .kicker::before { content: ''; width: 22px; height: 1.5px; background: var(--gold); }
+    .h-sec { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 4.6vw, 2.8rem); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .h-sec em { font-style: italic; color: var(--lake-deep); }
+    .lead { font-size: 16px; color: var(--ink-soft); max-width: 640px; }
+    .paper2 { background: var(--paper-2); }
 
-    /* WHY cards */
-    .why { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 26px; }
-    .why-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
-    .cream .why-card { background: #fff; }
-    .why-ic { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(26,122,122,0.1); color: var(--teal); margin-bottom: 12px; }
-    .why-ic svg { width: 22px; height: 22px; }
-    .why-card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.22rem; margin-bottom: 6px; }
-    .why-card p { font-size: 14px; color: var(--muted); }
+    /* WHY — editorial numbered list */
+    .why { margin-top: 30px; display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+    .why-row { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .why-num { font-family: var(--serif); font-size: 1.5rem; color: var(--gold); font-weight: 500; line-height: 1; min-width: 30px; }
+    .why-row h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin-bottom: 5px; }
+    .why-row p { font-size: 14.5px; color: var(--ink-soft); }
 
-    /* OWNER promise */
-    .owner { background: var(--ink-2); color: #fff; border-radius: 22px; padding: 34px 26px; }
-    .owner .kicker { color: var(--gold-2); }
-    .owner blockquote { font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 3vw, 1.85rem); line-height: 1.35; margin: 6px 0 16px; }
-    .owner cite { font-style: normal; font-size: 14px; color: rgba(255,255,255,0.72); }
-    .owner cite strong { color: #fff; font-style: normal; }
+    /* OWNER — asymmetric image + quote */
+    .owner-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+    .owner-fig { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+    .owner-fig img { width: 100%; height: 300px; object-fit: cover; }
+    .owner-quote blockquote { font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 3.2vw, 2rem); line-height: 1.32; letter-spacing: -0.01em; }
+    .owner-quote cite { display: block; margin-top: 16px; font-style: normal; font-size: 14px; color: var(--ink-soft); }
+    .owner-quote cite b { color: var(--ink); }
 
     /* REVIEWS */
-    .reviews { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 26px; }
-    .rev { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
-    .cream .rev { background: #fff; }
-    .rev-stars { color: #f3a712; letter-spacing: 2px; font-size: 15px; margin-bottom: 8px; }
-    .rev p { font-size: 14.5px; color: #2a3940; margin-bottom: 14px; }
-    .rev p strong { color: var(--ink); }
+    .reviews { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    .rev { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .rev .rs { color: #d99a3a; letter-spacing: 2px; font-size: 15px; }
+    .rev p { font-family: var(--serif); font-weight: 400; font-size: 17px; line-height: 1.45; margin: 10px 0 16px; color: var(--ink); }
     .rev-who { display: flex; align-items: center; gap: 11px; }
-    .rev-av { width: 38px; height: 38px; border-radius: 50%; background: var(--teal); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: var(--serif); flex-shrink: 0; }
+    .rev-av { width: 38px; height: 38px; border-radius: 50%; background: var(--lake); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-family: var(--serif); flex-shrink: 0; }
     .rev-name { font-weight: 600; font-size: 14px; }
-    .rev-loc { font-size: 12.5px; color: var(--muted); }
-    .rev-g { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--muted); margin-top: 11px; }
+    .rev-loc { font-size: 12.5px; color: var(--ink-soft); }
+    .rev-g { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ink-soft); margin-top: 12px; }
     .rev-g img { width: 12px; height: 12px; display: inline; }
 
-    /* GALLERY */
-    .gal { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 24px; }
-    .gal figure { border-radius: 14px; overflow: hidden; aspect-ratio: 4/3; background: var(--cream); }
-    .gal img { width: 100%; height: 100%; object-fit: cover; }
+    /* GALLERY — editorial feature grid */
+    .gal { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .gal figure { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 4/3; }
+    .gal figure img { width: 100%; height: 100%; object-fit: cover; }
 
-    /* PROCESS */
-    .steps { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 26px; }
-    .step { display: flex; gap: 15px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
-    .cream .step { background: #fff; }
-    .step-n { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; }
-    .step h3 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
-    .step p { font-size: 13.5px; color: var(--muted); }
+    /* PROCESS — timeline */
+    .timeline { margin-top: 30px; }
+    .tl { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding-bottom: 26px; position: relative; }
+    .tl:not(:last-child)::before { content: ''; position: absolute; left: 15px; top: 36px; bottom: 0; width: 1.5px; background: var(--line); }
+    .tl-dot { width: 32px; height: 32px; border-radius: 50%; background: var(--lake); color: #fff; font-family: var(--serif); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; z-index: 1; }
+    .tl h3 { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; margin-bottom: 3px; }
+    .tl p { font-size: 14px; color: var(--ink-soft); }
 
-    /* VALUE BAND (financing + heroes) */
-    .band { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 26px; }
-    .band-card { border-radius: var(--radius); padding: 24px; border: 1px solid var(--line); background: #fff; }
-    .band-card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; margin-bottom: 8px; }
-    .band-card p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
-    .band-card.fin { background: linear-gradient(135deg, #143a44, #1a7a7a); color: #fff; border: none; }
-    .band-card.fin p { color: rgba(255,255,255,0.85); }
-
-    .btn-line { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #fff; text-decoration: none; font-weight: 600; font-size: 14.5px; padding: 12px 22px; border-radius: 100px; }
-    .btn-line:hover { background: var(--gold-2); }
-    .band-card.fin .btn-line { background: #fff; color: var(--ink); }
+    /* VALUE BAND */
+    .band { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    .band-card { border-radius: var(--radius); padding: 26px; border: 1px solid var(--line); background: var(--white); }
+    .band-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
+    .band-card p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+    .band-card.fin { background: var(--lake-deep); color: #fff; border-color: var(--lake-deep); }
+    .band-card.fin p { color: rgba(255,255,255,0.82); }
+    .btn-line { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 100px; }
+    .band-card.fin .btn-line { background: var(--gold); }
+    .btn-line:hover { filter: brightness(1.08); }
 
     /* AREAS */
-    .pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-    .pill { background: #fff; border: 1px solid var(--line); border-radius: 100px; padding: 8px 15px; font-size: 13px; font-weight: 500; }
-    .cream .pill { background: #fff; }
+    .pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { background: var(--white); border: 1px solid var(--line); border-radius: 100px; padding: 8px 15px; font-size: 13px; font-weight: 500; }
 
     /* FAQ */
-    .faq { margin-top: 24px; max-width: 760px; }
-    .faq details { border-bottom: 1px solid var(--line); padding: 4px 0; }
-    .faq summary { list-style: none; cursor: pointer; padding: 15px 36px 15px 0; font-weight: 600; font-size: 15.5px; position: relative; }
+    .faq { margin-top: 26px; max-width: 780px; border-top: 1px solid var(--line); }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 600; font-size: 16px; position: relative; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: '+'; position: absolute; right: 6px; top: 12px; font-size: 22px; color: var(--teal); font-weight: 400; transition: transform .2s; }
+    .faq summary::after { content: '+'; position: absolute; right: 4px; top: 14px; font-size: 24px; font-weight: 300; color: var(--lake); }
     .faq details[open] summary::after { content: '\2212'; }
-    .faq .ans { padding: 0 30px 16px 0; font-size: 14.5px; color: var(--muted); }
+    .faq .ans { padding: 0 30px 18px 0; font-size: 14.5px; color: var(--ink-soft); }
 
-    /* FINAL CTA */
-    .final { background: var(--ink); color: #fff; text-align: center; }
+    /* FINAL CTA — deep teal block for punctuation */
+    .final { background: var(--lake-deep); color: #fff; text-align: center; }
     .final .h-sec { color: #fff; }
-    .final .lead { color: rgba(255,255,255,0.8); margin: 0 auto 22px; }
+    .final .h-sec em { color: var(--gold-2); }
+    .final .lead { color: rgba(255,255,255,0.82); margin: 0 auto 24px; }
     .final-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .btn-primary { background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 100px; box-shadow: 0 10px 26px rgba(196,134,43,0.32); }
-    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.3); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 100px; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary { background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 100px; box-shadow: 0 10px 26px rgba(0,0,0,0.18); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.35); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 100px; display: inline-flex; align-items: center; gap: 8px; }
     .btn-ghost svg { width: 16px; height: 16px; }
 
-    footer { background: #081420; color: rgba(255,255,255,0.6); text-align: center; padding: 30px 20px 96px; font-size: 12.5px; line-height: 1.9; }
-    footer img { height: 38px; width: auto; margin: 0 auto 12px; opacity: 0.9; }
-    footer a { color: rgba(255,255,255,0.4); }
+    footer { background: var(--ink); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 22px 96px; font-size: 12.5px; line-height: 1.9; }
+    footer img { height: 36px; width: auto; margin: 0 auto 12px; }
+    footer a { color: rgba(255,255,255,0.45); }
 
     /* STICKY MOBILE BAR */
-    .mbar {
-      position: fixed; inset: auto 0 0 0; z-index: 70;
-      display: flex; gap: 8px; padding: 9px 12px;
-      background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(12,27,38,0.1);
-    }
-    .mbar a { flex: 1; text-align: center; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 13px 8px; border-radius: 11px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
-    .mbar .m-call { background: var(--ink); color: #fff; }
+    .mbar { position: fixed; inset: auto 0 0 0; z-index: 70; display: flex; gap: 8px; padding: 9px 12px; background: rgba(251,248,242,0.97); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
+    .mbar a { flex: 1; text-align: center; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 13px 8px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+    .mbar .m-call { border: 1.5px solid var(--ink); color: var(--ink); }
     .mbar .m-quote { background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff; }
     .mbar svg { width: 15px; height: 15px; }
 
-    /* ── RESPONSIVE ── */
-    @media (min-width: 880px) {
-      .hero { padding: 130px 24px 70px; min-height: 90vh; display: flex; align-items: center; }
-      .hero-inner { grid-template-columns: 1.05fr 460px; gap: 50px; align-items: center; width: 100%; }
-      .form-card { padding: 26px 24px; }
-      .why { grid-template-columns: repeat(2, 1fr); }
+    /* ── DESKTOP ── */
+    @media (min-width: 900px) {
+      .hero { padding: 138px 0 64px; }
+      .hero-grid { grid-template-columns: 1.05fr 440px; gap: 56px; align-items: center; }
+      .hero-figure { display: none; } /* desktop keeps it clean; photo lives in owner/gallery sections */
+      .why { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+      .why-row { border-bottom: 1px solid var(--line); }
+      .owner-grid { grid-template-columns: 0.85fr 1.15fr; }
       .reviews { grid-template-columns: repeat(3, 1fr); }
       .gal { grid-template-columns: repeat(3, 1fr); }
-      .steps { grid-template-columns: repeat(2, 1fr); }
+      .gal figure.feature { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
       .band { grid-template-columns: 1fr 1fr; }
-      .gal figure.tall { grid-row: span 2; aspect-ratio: auto; }
       .mbar { display: none; }
     }
-    @media (max-width: 879px) {
-      /* keep pre-form content tight so the form sits above the fold */
+    @media (max-width: 899px) {
+      /* keep the form above the fold: trim hero copy on mobile */
       .hero-sub { display: none; }
-      .hero-chips { display: none; }
-      .hero h1 { margin-bottom: 14px; }
-      .hero-copy { margin-bottom: 2px; }
+      .hero-rating { display: none; }
+      .hero-figure { display: none; }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
     }
     @media (max-width: 420px) {
       .hdr { padding: 11px 15px; }
       .hdr img { height: 36px; }
-      .hdr-call { padding: 9px 14px; font-size: 13px; }
-      .hero { padding: 76px 15px 26px; }
-      .form-card { padding: 20px 16px; }
-      .gal { grid-template-columns: repeat(2, 1fr); }
+      .hdr-call { padding: 8px 13px; font-size: 13px; }
+      .hero { padding: 84px 0 28px; }
+      .form-card { padding: 20px 17px; }
     }
   </style>
 </head>
@@ -304,23 +263,25 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <span class="eyebrow">Lake Conroe &amp; Montgomery County</span>
-      <h1>Lake Conroe's <span class="accent">custom pool</span> builder.</h1>
-      <p class="hero-sub">Owner-led design and construction for lakeside homes - on-site design from Jim, HOA &amp; permits handled, and many pools finished in 30-45 days.</p>
-      <div class="hero-chips">
-        <span class="chip"><span class="gstar">&#9733;</span> 4.9 &middot; 25+ Google reviews</span>
-        <span class="chip">Family-owned since 2005</span>
-        <span class="chip">Google Guaranteed</span>
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow">Lake Conroe &middot; Montgomery County</span>
+      <h1>Your Lake Conroe backyard, <em>designed by hand.</em></h1>
+      <p class="hero-sub">Owner-led custom pools and outdoor living for lakeside homes - Jim designs yours on-site, handles every permit, and finishes many builds in 30-45 days.</p>
+      <div class="hero-rating">
+        <span class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><b>4.9</b> &middot; 25+ Google reviews</span>
+        <span>&middot;</span>
+        <span>Family-owned since 2005</span>
       </div>
+      <figure class="hero-figure"><img src="/realresults/realresults-hero.webp" alt="Custom pool by Escape Pools near Lake Conroe" /></figure>
     </div>
 
     <!-- CONVERSION CORE: reuses the site-wide "consultation" Netlify form -->
     <div class="form-card" data-form-card>
-      <div class="fc-head">
+      <div class="fc-top">
         <h2>Free design consultation</h2>
-        <span class="fc-badge">Reply &lt; 1 hr</span>
+        <span class="fc-pill">Reply &lt; 1 hr</span>
       </div>
       <p class="fc-sub">Tell us about your Lake Conroe backyard - Jim personally responds.</p>
 
@@ -365,59 +326,46 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-submit">Get My Free Consultation &rarr;</button>
+        <button type="submit" class="btn-submit">Request My Free Consultation &rarr;</button>
         <p class="fc-note">Complimentary &amp; no-obligation &middot; <strong>Owner replies, usually within the hour</strong></p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- HAIRLINE TRUST -->
 <div class="trust">
-  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; Insured</span>
-  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Family-Owned &middot; Since 2005</span>
-  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> Many pools in 30-45 days</span>
-  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg> 4.9&#9733; on Google</span>
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Licensed &amp; Insured</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Family-Owned &middot; Since 2005</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> Many pools in 30-45 days</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg> 4.9&#9733; on Google</span>
+  </div>
 </div>
 
-<!-- WHY LAKE CONROE -->
+<!-- WHY -->
 <section class="s">
   <div class="wrap">
-    <div class="kicker">Why Lake Conroe homeowners choose Escape Pools</div>
-    <h2 class="h-sec">A backyard worthy of the lake - built right the first time.</h2>
-    <p class="lead">Lake Conroe homes deserve more than a stock pool. We design and build custom pools and outdoor living for lakeside and golf-course lots across Montgomery County - handling design, permits, and construction start to finish.</p>
+    <div class="kicker">Why homeowners choose us</div>
+    <h2 class="h-sec">A backyard worthy of the lake - <em>built right the first time.</em></h2>
+    <p class="lead">Lake Conroe homes deserve more than a stock pool. We design and build custom pools and outdoor living for lakeside and golf-course lots across Montgomery County - design, permits, and construction, all under one roof.</p>
     <div class="why">
-      <div class="why-card">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>Owner-led by Jim</h3>
-        <p>Jim designs your pool on-site during the first visit - no week-long wait - and stays reachable nights and weekends through the entire build.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h3>Built for lakeside lots &amp; HOAs</h3>
-        <p>Waterfront grades, golf-course communities, and strict HOAs are our home turf - Walden, Bentwater, April Sound, Del Lago and beyond. We handle the submissions.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Fast, well-managed builds</h3>
-        <p>Long-term crews and tight scheduling mean many pools are finished in 30-45 days - our reviews mention 3- and 4-week completions.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <h3>Transparent budgets</h3>
-        <p>Budget-aware planning and clear quote guidance from the first conversation - plus financing options. No surprise change orders.</p>
-      </div>
+      <div class="why-row"><div class="why-num">01</div><div><h3>Owner-led by Jim</h3><p>Jim designs your pool on-site during the first visit - no week-long wait - and stays reachable nights and weekends through the entire build.</p></div></div>
+      <div class="why-row"><div class="why-num">02</div><div><h3>Built for lakeside lots &amp; HOAs</h3><p>Waterfront grades, golf-course communities, and strict HOAs are home turf - Walden, Bentwater, April Sound, Del Lago. We handle the submissions.</p></div></div>
+      <div class="why-row"><div class="why-num">03</div><div><h3>Fast, well-managed builds</h3><p>Long-term crews and tight scheduling mean many pools are finished in 30-45 days - our reviews mention 3- and 4-week completions.</p></div></div>
+      <div class="why-row"><div class="why-num">04</div><div><h3>Transparent budgets</h3><p>Budget-aware planning and clear quote guidance from the first conversation - plus financing options. No surprise change orders.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- OWNER PROMISE -->
-<section class="s cream">
-  <div class="wrap">
-    <div class="owner">
+<!-- OWNER -->
+<section class="s paper2">
+  <div class="wrap owner-grid">
+    <figure class="owner-fig"><img src="/realresults/Screenshot%202026-02-02%20135700.webp" alt="Escape Pools custom pool and spa" /></figure>
+    <div class="owner-quote">
       <div class="kicker">A promise from the owner</div>
       <blockquote>"For a big investment like a pool, you should get it done right the first time. I design it with you, I'm on-site, and I'm a phone call away - start to finish."</blockquote>
-      <cite><strong>Jim</strong> - Owner, Escape Pools (with Jacob &amp; our long-term crews)</cite>
+      <cite><b>Jim</b> - Owner, Escape Pools &middot; with Jacob &amp; our long-term crews</cite>
     </div>
   </div>
 </section>
@@ -429,20 +377,20 @@
     <h2 class="h-sec">Real pools. Real Lake Conroe-area families.</h2>
     <div class="reviews">
       <div class="rev">
-        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Shout out to Escape Pools on completing my pool in <strong>3 weeks.</strong> Jim and Jacob are easy to reach with any questions. So glad I trusted them."</p>
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Completing my pool in 3 weeks - Jim and Jacob are easy to reach with any questions. So glad I trusted them."</p>
         <div class="rev-who"><div class="rev-av">E</div><div><div class="rev-name">Ena Jeter</div><div class="rev-loc">Conroe, TX</div></div></div>
         <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
       </div>
       <div class="rev">
-        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The most knowledgeable, professional and trustworthy of everyone we met. They answered questions night or day. <strong>Enjoying our pool after only 4 weeks!</strong>"</p>
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The most knowledgeable, professional and trustworthy of everyone we met. Enjoying our pool after only 4 weeks!"</p>
         <div class="rev-who"><div class="rev-av">A</div><div><div class="rev-name">Aliana Wynn</div><div class="rev-loc">The Woodlands, TX</div></div></div>
         <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
       </div>
       <div class="rev">
-        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Jim is super methodical, incredibly seasoned - the end product shows it. He took care of permits and stayed on timeline. <strong>The best in the business.</strong>"</p>
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Jim is super methodical, incredibly seasoned - the end product shows it. He handled permits and stayed on timeline."</p>
         <div class="rev-who"><div class="rev-av">F</div><div><div class="rev-name">Familia De Leon</div><div class="rev-loc">Greater Houston, TX</div></div></div>
         <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
       </div>
@@ -451,16 +399,15 @@
 </section>
 
 <!-- GALLERY -->
-<section class="s cream">
+<section class="s paper2">
   <div class="wrap">
     <div class="kicker">Recent work</div>
     <h2 class="h-sec">Custom pools &amp; outdoor living.</h2>
     <div class="gal">
-      <figure class="tall"><img src="/realresults/Screenshot%202026-02-02%20135927.webp" alt="Custom pool near Lake Conroe" loading="lazy" /></figure>
-      <figure><img src="/realresults/Screenshot%202026-02-02%20135013.webp" alt="Custom pool build in Montgomery County" loading="lazy" /></figure>
-      <figure><img src="/realresults/Screenshot%202026-02-02%20135700.webp" alt="Pool and spa, Lake Conroe area" loading="lazy" /></figure>
+      <figure class="feature"><img src="/realresults/Screenshot%202026-02-02%20135927.webp" alt="Custom pool near Lake Conroe" loading="lazy" /></figure>
+      <figure><img src="/realresults/Screenshot%202026-02-02%20135013.webp" alt="Custom pool build, Montgomery County" loading="lazy" /></figure>
       <figure><img src="/assets/legacy-gallery/legacy-dusk-cabana.jpg" alt="Luxury pool and cabana at dusk" loading="lazy" /></figure>
-      <figure><img src="/realresults/Screenshot%202026-02-02%20135837.webp" alt="Pool patio outdoor living" loading="lazy" /></figure>
+      <figure><img src="/realresults/Screenshot%202026-02-02%20135837.webp" alt="Pool patio and outdoor living" loading="lazy" /></figure>
       <figure><img src="/assets/legacy-gallery/legacy-white-pergola.jpg" alt="Pergola and pool design" loading="lazy" /></figure>
     </div>
   </div>
@@ -471,17 +418,17 @@
   <div class="wrap">
     <div class="kicker">How it works</div>
     <h2 class="h-sec">From first call to first swim.</h2>
-    <div class="steps">
-      <div class="step"><div class="step-n">1</div><div><h3>Free in-home consultation</h3><p>Jim comes to your Lake Conroe home and designs your pool on-site - real ideas and direction in the first meeting.</p></div></div>
-      <div class="step"><div class="step-n">2</div><div><h3>Design &amp; permitting</h3><p>We handle HOA submissions, county and city permits, and design finalization. Zero bureaucratic headaches for you.</p></div></div>
-      <div class="step"><div class="step-n">3</div><div><h3>Owner-supervised build</h3><p>Same long-term crews, no gaps, no delays. Many projects completed in 30-45 days.</p></div></div>
-      <div class="step"><div class="step-n">4</div><div><h3>Walkthrough &amp; pool school</h3><p>Jim personally walks you through everything so you know exactly how to enjoy and care for your new pool.</p></div></div>
+    <div class="timeline">
+      <div class="tl"><div class="tl-dot">1</div><div><h3>Free in-home consultation</h3><p>Jim comes to your Lake Conroe home and designs your pool on-site - real ideas and direction in the first meeting.</p></div></div>
+      <div class="tl"><div class="tl-dot">2</div><div><h3>Design &amp; permitting</h3><p>We handle HOA submissions, county and city permits, and design finalization. Zero bureaucratic headaches for you.</p></div></div>
+      <div class="tl"><div class="tl-dot">3</div><div><h3>Owner-supervised build</h3><p>Same long-term crews, no gaps, no delays. Many projects completed in 30-45 days.</p></div></div>
+      <div class="tl"><div class="tl-dot">4</div><div><h3>Walkthrough &amp; pool school</h3><p>Jim personally walks you through everything so you know how to enjoy and care for your new pool.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- VALUE BAND: financing + heroes -->
-<section class="s cream">
+<!-- VALUE BAND -->
+<section class="s paper2">
   <div class="wrap">
     <div class="band">
       <div class="band-card fin">
@@ -513,8 +460,8 @@
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="s cream">
+<!-- AREAS -->
+<section class="s paper2">
   <div class="wrap">
     <div class="kicker">Lake Conroe service area</div>
     <h2 class="h-sec">Proudly serving the Lake Conroe communities.</h2>
@@ -531,7 +478,7 @@
 <!-- FINAL CTA -->
 <section class="s final">
   <div class="wrap">
-    <h2 class="h-sec">Ready to design your Lake Conroe escape?</h2>
+    <h2 class="h-sec">Ready to design your <em>Lake Conroe escape?</em></h2>
     <p class="lead">Request your free, no-obligation consultation. The owner personally responds - usually within the hour.</p>
     <div class="final-btns">
       <a href="#main-form" class="btn-primary" onclick="return scrollToMainForm(event)">Request My Free Consultation</a>
@@ -570,7 +517,7 @@
     var f=document.getElementById('main-form');
     var t=(f&&f.closest('.form-card'))||f;
     if(!t)return false;
-    var o=window.innerWidth<768?84:104;
+    var o=window.innerWidth<768?84:100;
     var top=Math.max(t.getBoundingClientRect().top+window.scrollY-o,0);
     window.scrollTo({top:top,behavior:'smooth'});
     setTimeout(function(){var n=document.getElementById('name');if(n)n.focus({preventScroll:true});},450);
