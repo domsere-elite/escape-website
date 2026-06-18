@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Custom pool design and construction for Lake Conroe homeowners. Owner-led builds, transparent budgets, and well-managed timelines across Conroe, Montgomery, Willis, and the Lake Conroe communities." />
-  <title>Custom Pools on Lake Conroe | Escape Pools</title>
+  <meta name="description" content="Lake Conroe's owner-led custom pool builder. On-site design by Jim, HOA & permits handled, many pools finished in 30-45 days. Serving Walden, Bentwater, April Sound, Montgomery, Willis & the Lake Conroe communities. Free consultation." />
+  <title>Lake Conroe Custom Pool Builder | Escape Pools</title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHDH2ZC1QK"></script>
@@ -24,483 +24,287 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0d1f2d;
-      --teal: #1a7a7a;
-      --teal-light: #2a9d9d;
-      --gold: #c8872a;
-      --gold-light: #e8a84a;
-      --cream: #f8f4ee;
+      --paper: #fbf8f2;
+      --paper-2: #f3ede1;
       --white: #ffffff;
-      --gray: #6b7280;
-      --gray-light: #f3f4f6;
-      --font-display: 'Cormorant Garamond', serif;
-      --font-body: 'DM Sans', sans-serif;
+      --ink: #16282f;
+      --ink-soft: #4d5e64;
+      --lake: #2f7d7d;
+      --lake-deep: #1c5757;
+      --sand: #ece3d3;
+      --line: #e4ddcd;
+      --gold: #bd7f27;
+      --gold-2: #d99a3a;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --radius: 16px;
     }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      color: var(--navy);
-      background: var(--white);
-      overflow-x: hidden;
-    }
-
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
     .hidden, [hidden] { display: none !important; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
 
-    /* ── STICKY HEADER ── */
-    .site-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(13,31,45,0.08);
-      box-shadow: 0 10px 24px rgba(13,31,45,0.08);
+    /* ── HEADER ── */
+    .hdr {
+      position: fixed; inset: 0 0 auto 0; z-index: 60;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 22px; background: rgba(251,248,242,0.9);
+      backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
     }
-
-    .header-logo img { height: 46px; }
-
-    .header-cta { display: flex; align-items: center; gap: 12px; }
-
-    .btn-call {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--teal);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 10px 20px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: background 0.2s;
+    .hdr img { height: 42px; width: auto; }
+    .hdr-call {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1.5px solid var(--ink); color: var(--ink); text-decoration: none;
+      padding: 9px 17px; border-radius: 100px; font-weight: 600; font-size: 14px; white-space: nowrap;
+      transition: background .15s, color .15s;
     }
-    .btn-call:hover { background: var(--teal-light); }
-    .btn-call svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .hdr-call svg { width: 15px; height: 15px; }
+    .hdr-call:hover { background: var(--ink); color: #fff; }
 
-    /* ── HERO ── */
-    .hero {
-      position: relative;
-      padding: 96px 24px 56px;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(13,31,45,0.88) 0%, rgba(13,31,45,0.62) 55%, rgba(26,122,122,0.42) 100%);
-      z-index: 1;
-    }
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      max-width: 1120px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .hero-copy { max-width: 600px; animation: fadeUp 0.7s ease both; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50px;
-      padding: 6px 14px;
-      color: rgba(255,255,255,0.92);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    /* ── HERO (light editorial) ── */
+    .hero { padding: 92px 0 36px; background:
+      radial-gradient(820px 520px at 88% -8%, rgba(47,125,125,0.08), transparent 60%),
+      radial-gradient(680px 460px at -2% 110%, rgba(189,127,39,0.07), transparent 55%); }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lake);
       margin-bottom: 16px;
     }
-
+    .eyebrow::before { content: ''; width: 26px; height: 1.5px; background: var(--gold); display: inline-block; }
     .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 6vw, 3.6rem);
-      font-weight: 600;
-      line-height: 1.08;
-      color: white;
-      margin-bottom: 14px;
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.4rem, 8vw, 4.1rem); line-height: 1.03; letter-spacing: -0.015em; color: var(--ink);
     }
-    .hero h1 em { font-style: normal; color: var(--gold-light); }
-
-    .hero-sub {
-      font-size: 16px;
-      line-height: 1.6;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 22px;
-      max-width: 480px;
-    }
-
-    .google-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: white;
-      border-radius: 12px;
-      padding: 10px 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .google-badge img { width: 20px; height: 20px; }
-    .google-badge-text { font-size: 13px; font-weight: 500; color: var(--navy); }
-    .stars { color: #f59e0b; letter-spacing: 2px; font-size: 12px; }
+    .hero h1 em { font-style: italic; color: var(--lake-deep); }
+    .hero-sub { font-size: 16.5px; color: var(--ink-soft); max-width: 460px; margin-top: 18px; }
+    .hero-rating { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; font-size: 13px; color: var(--ink-soft); }
+    .hero-rating .rs { color: #d99a3a; letter-spacing: 2px; font-size: 15px; }
+    .hero-rating b { color: var(--ink); font-weight: 600; }
+    .hero-figure { position: relative; margin-top: 26px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(22,40,47,0.12); }
+    .hero-figure img { width: 100%; height: 280px; object-fit: cover; object-position: center 35%; display: block; }
+    .hero-cap { position: absolute; left: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 7px; background: rgba(251,248,242,0.94); backdrop-filter: blur(4px); border-radius: 100px; padding: 7px 13px; font-size: 12px; font-weight: 600; color: var(--ink); box-shadow: 0 6px 18px rgba(22,40,47,0.18); }
+    .hero-cap .rs { color: #d99a3a; letter-spacing: 1px; }
 
     /* ── FORM CARD ── */
     .form-card {
-      position: relative;
-      z-index: 2;
-      background: white;
-      border-radius: 20px;
-      padding: 26px 22px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
-      animation: fadeUp 0.7s 0.1s ease both;
-      width: 100%;
-      max-width: 460px;
-      scroll-margin-top: 110px;
+      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: 0 16px 44px rgba(22,40,47,0.1); padding: 24px 22px; scroll-margin-top: 92px;
     }
-    .form-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 4px;
+    .form-card .fc-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+    .form-card h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.1; }
+    .fc-pill { font-size: 11px; font-weight: 700; color: var(--lake); background: rgba(47,125,125,0.1); padding: 5px 10px; border-radius: 100px; white-space: nowrap; }
+    .form-card .fc-sub { font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); margin-bottom: 5px; }
+    .field input, .field select {
+      width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px;
+      font-family: var(--sans); font-size: 16px; color: var(--ink); background: var(--paper);
+      transition: border-color .15s, box-shadow .15s, background .15s; appearance: none; -webkit-appearance: none;
     }
-    .form-card > p {
-      font-size: 13px;
-      color: var(--gray);
-      margin-bottom: 18px;
-    }
-
-    .form-group { margin-bottom: 13px; }
-    .form-group label {
-      display: block;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gray);
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid #e5e7eb;
-      border-radius: 10px;
-      font-family: var(--font-body);
-      font-size: 16px; /* 16px avoids iOS zoom-on-focus */
-      color: var(--navy);
-      background: white;
-      transition: border-color 0.2s;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus { outline: none; border-color: var(--teal); }
-
-    .select-wrapper { position: relative; }
-    .select-wrapper::after {
-      content: '\25BE';
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gray);
-      pointer-events: none;
-      font-size: 14px;
-    }
-
+    .field input::placeholder { color: #9aa6aa; }
+    .field input:focus, .field select:focus { outline: none; border-color: var(--lake); background: #fff; box-shadow: 0 0 0 3px rgba(47,125,125,0.12); }
+    .sel { position: relative; }
+    .sel::after { content: '\25BE'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--ink-soft); pointer-events: none; font-size: 12px; }
     .btn-submit {
-      width: 100%;
-      padding: 16px;
-      background: var(--gold);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-family: var(--font-body);
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      margin-top: 6px;
+      width: 100%; margin-top: 5px; padding: 15px; border: none; border-radius: 10px; cursor: pointer;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff;
+      font-family: var(--sans); font-size: 16px; font-weight: 700; letter-spacing: 0.01em;
+      box-shadow: 0 8px 20px rgba(189,127,39,0.3); transition: transform .12s, filter .15s;
     }
-    .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-submit:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .fc-note { font-size: 11.5px; color: var(--ink-soft); text-align: center; margin-top: 9px; }
+    .fc-note strong { color: var(--ink); }
 
-    .form-disclaimer {
-      font-size: 11px;
-      color: var(--gray);
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--navy);
-      padding: 18px 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      justify-content: center;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.85);
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .trust-item svg { color: var(--gold); flex-shrink: 0; }
+    /* ── HAIRLINE TRUST ── */
+    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+    .trust .wrap { display: flex; flex-wrap: wrap; gap: 12px 30px; justify-content: center; padding-top: 16px; padding-bottom: 16px; }
+    .trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+    .trust svg { width: 16px; height: 16px; color: var(--lake); flex-shrink: 0; }
 
     /* ── SECTIONS ── */
-    section.block { padding: 56px 24px; }
-    .wrap { max-width: 1080px; margin: 0 auto; }
-    .section-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-    .section-body {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--gray);
-      max-width: 620px;
-    }
+    section.s { padding: 60px 0; }
+    .kicker { font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lake); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .kicker::before { content: ''; width: 22px; height: 1.5px; background: var(--gold); }
+    .h-sec { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 4.6vw, 2.8rem); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .h-sec em { font-style: italic; color: var(--lake-deep); }
+    .lead { font-size: 16px; color: var(--ink-soft); max-width: 640px; }
+    .paper2 { background: var(--paper-2); }
 
-    .value-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 28px;
-    }
-    .value-card {
-      background: white;
-      border: 1px solid #eef0f2;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 2px 12px rgba(13,31,45,0.05);
-    }
-    .value-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .value-card p { font-size: 14px; line-height: 1.6; color: var(--gray); }
+    /* WHY — editorial numbered list */
+    .why { margin-top: 30px; display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+    .why-row { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .why-num { font-family: var(--serif); font-size: 1.5rem; color: var(--gold); font-weight: 500; line-height: 1; min-width: 30px; }
+    .why-row h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin-bottom: 5px; }
+    .why-row p { font-size: 14.5px; color: var(--ink-soft); }
 
-    .alt { background: var(--cream); }
+    /* OWNER — asymmetric image + quote */
+    .owner-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+    .owner-fig { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+    .owner-fig img { width: 100%; height: 300px; object-fit: cover; }
+    .owner-quote blockquote { font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 3.2vw, 2rem); line-height: 1.32; letter-spacing: -0.01em; }
+    .owner-quote cite { display: block; margin-top: 16px; font-style: normal; font-size: 14px; color: var(--ink-soft); }
+    .owner-quote cite b { color: var(--ink); }
 
-    .steps { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
-    .step {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 2px 12px rgba(13,31,45,0.05);
-    }
-    .step-num {
-      flex-shrink: 0;
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: var(--teal);
-      color: white;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    .step-title { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-    .step-desc { font-size: 14px; line-height: 1.6; color: var(--gray); }
+    /* REVIEWS */
+    .reviews { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    .rev { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .rev .rs { color: #d99a3a; letter-spacing: 2px; font-size: 15px; }
+    .rev p { font-family: var(--serif); font-weight: 400; font-size: 17px; line-height: 1.45; margin: 10px 0 16px; color: var(--ink); }
+    .rev-who { display: flex; align-items: center; gap: 11px; }
+    .rev-av { width: 38px; height: 38px; border-radius: 50%; background: var(--lake); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-family: var(--serif); flex-shrink: 0; }
+    .rev-name { font-weight: 600; font-size: 14px; }
+    .rev-loc { font-size: 12.5px; color: var(--ink-soft); }
+    .rev-g { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ink-soft); margin-top: 12px; }
+    .rev-g img { width: 12px; height: 12px; display: inline; }
 
-    .areas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-    .area-pill {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 50px;
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--navy);
-    }
+    /* WORK — alternating editorial feature blocks */
+    .feat { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; margin-top: 30px; }
+    .feat + .feat { margin-top: 40px; }
+    .feat-fig { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 16px 38px rgba(22,40,47,0.1); }
+    .feat-fig img { width: 100%; height: 290px; object-fit: cover; }
+    .feat-tag { font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lake); margin-bottom: 9px; }
+    .feat-body h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2rem); line-height: 1.12; margin-bottom: 9px; }
+    .feat-body h3 em { font-style: italic; color: var(--lake-deep); }
+    .feat-body p { font-size: 15px; color: var(--ink-soft); max-width: 470px; }
 
-    .quote-card {
-      background: var(--navy);
-      border-radius: 20px;
-      padding: 36px 28px;
-      color: white;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .quote-card .stars { font-size: 16px; margin-bottom: 14px; display: block; }
-    .quote-card blockquote {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      line-height: 1.4;
-      font-weight: 500;
-      margin-bottom: 16px;
-    }
-    .quote-card cite { font-style: normal; font-size: 14px; color: rgba(255,255,255,0.7); }
+    /* PROCESS — timeline */
+    .timeline { margin-top: 30px; }
+    .tl { display: grid; grid-template-columns: auto 1fr; gap: 18px; padding-bottom: 26px; position: relative; }
+    .tl:not(:last-child)::before { content: ''; position: absolute; left: 15px; top: 36px; bottom: 0; width: 1.5px; background: var(--line); }
+    .tl-dot { width: 32px; height: 32px; border-radius: 50%; background: var(--lake); color: #fff; font-family: var(--serif); font-weight: 600; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; z-index: 1; }
+    .tl h3 { font-family: var(--serif); font-weight: 500; font-size: 1.2rem; margin-bottom: 3px; }
+    .tl p { font-size: 14px; color: var(--ink-soft); }
 
-    .final-cta { background: var(--navy); text-align: center; }
-    .final-cta .section-title { color: white; }
-    .final-cta .section-body { color: rgba(255,255,255,0.8); margin: 0 auto 24px; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      padding: 16px 34px;
-      font-size: 16px;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    /* VALUE BAND */
+    .band { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    .band-card { border-radius: var(--radius); padding: 26px; border: 1px solid var(--line); background: var(--white); }
+    .band-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
+    .band-card p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+    .band-card.fin { background: var(--lake-deep); color: #fff; border-color: var(--lake-deep); }
+    .band-card.fin p { color: rgba(255,255,255,0.82); }
+    .btn-line { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 100px; }
+    .band-card.fin .btn-line { background: var(--gold); }
+    .btn-line:hover { filter: brightness(1.08); }
 
-    footer {
-      background: #081621;
-      color: rgba(255,255,255,0.7);
-      padding: 32px 24px;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-    footer a { color: var(--gold-light); text-decoration: none; }
+    /* AREAS */
+    .pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .pill { background: var(--white); border: 1px solid var(--line); border-radius: 100px; padding: 8px 15px; font-size: 13px; font-weight: 500; }
+
+    /* FAQ */
+    .faq { margin-top: 26px; max-width: 780px; border-top: 1px solid var(--line); }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 600; font-size: 16px; position: relative; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; position: absolute; right: 4px; top: 14px; font-size: 24px; font-weight: 300; color: var(--lake); }
+    .faq details[open] summary::after { content: '\2212'; }
+    .faq .ans { padding: 0 30px 18px 0; font-size: 14.5px; color: var(--ink-soft); }
+
+    /* FINAL CTA — deep teal block for punctuation */
+    .final { background: var(--lake-deep); color: #fff; text-align: center; }
+    .final .h-sec { color: #fff; }
+    .final .h-sec em { color: var(--gold-2); }
+    .final .lead { color: rgba(255,255,255,0.82); margin: 0 auto 24px; }
+    .final-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn-primary { background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 30px; border-radius: 100px; box-shadow: 0 10px 26px rgba(0,0,0,0.18); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.35); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 100px; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-ghost svg { width: 16px; height: 16px; }
+
+    footer { background: var(--ink); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 22px 96px; font-size: 12.5px; line-height: 1.9; }
+    footer img { height: 36px; width: auto; margin: 0 auto 12px; }
+    footer a { color: rgba(255,255,255,0.45); }
+
+    /* STICKY MOBILE BAR */
+    .mbar { position: fixed; inset: auto 0 0 0; z-index: 70; display: flex; gap: 8px; padding: 9px 12px; background: rgba(251,248,242,0.97); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
+    .mbar a { flex: 1; text-align: center; text-decoration: none; font-weight: 700; font-size: 14.5px; padding: 13px 8px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+    .mbar .m-call { border: 1.5px solid var(--ink); color: var(--ink); }
+    .mbar .m-quote { background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: #fff; }
+    .mbar svg { width: 15px; height: 15px; }
 
     /* ── DESKTOP ── */
-    @media (min-width: 901px) {
-      .hero { padding: 150px 24px 84px; min-height: 88vh; display: flex; align-items: center; }
-      .hero-grid {
-        grid-template-columns: 1.05fr 460px;
-        gap: 48px;
-        align-items: center;
-        width: 100%;
-      }
-      .hero-img { object-position: center 28%; }
-      .value-grid { grid-template-columns: repeat(3, 1fr); }
-      .steps { grid-template-columns: repeat(3, 1fr); }
-      .hero-sub { display: block; }
+    @media (min-width: 900px) {
+      .hero { padding: 128px 0 60px; }
+      .hero-grid { grid-template-columns: 1.05fr 440px; gap: 56px; align-items: start; }
+      .hero-figure { margin-top: 36px; }
+      .hero-figure img { height: 330px; }
+      .why { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+      .why-row { border-bottom: 1px solid var(--line); }
+      .owner-grid { grid-template-columns: 0.85fr 1.15fr; }
+      .reviews { grid-template-columns: repeat(3, 1fr); }
+      .feat { grid-template-columns: 1fr 1fr; gap: 52px; }
+      .feat + .feat { margin-top: 64px; }
+      .feat.rev .feat-fig { order: 2; }
+      .feat-fig img { height: 370px; }
+      .band { grid-template-columns: 1fr 1fr; }
+      .mbar { display: none; }
     }
-
-    /* ── MOBILE: form above the fold ── */
-    @media (max-width: 900px) {
-      .hero-img { object-position: center 34%; }
-      /* keep pre-form copy tight so the form sits in the first viewport */
+    @media (max-width: 899px) {
+      /* keep the form above the fold: trim hero copy on mobile */
       .hero-sub { display: none; }
-      .hero-copy { margin-bottom: 4px; }
-      .hero h1 { margin-bottom: 10px; }
-      .google-badge { display: none; }
+      .hero-rating { display: none; }
+      .hero-figure { display: none; }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
     }
-
-    @media (max-width: 480px) {
-      .site-header { padding: 12px 16px; }
-      .header-logo img { height: 38px; }
-      .btn-call { padding: 9px 16px; font-size: 13px; }
-      .hero { padding: 86px 16px 40px; }
-      .form-card { padding: 22px 18px; }
+    @media (max-width: 420px) {
+      .hdr { padding: 11px 15px; }
+      .hdr img { height: 36px; }
+      .hdr-call { padding: 8px 13px; font-size: 13px; }
+      .hero { padding: 84px 0 28px; }
+      .form-card { padding: 20px 17px; }
     }
   </style>
 </head>
 <body>
 
-<!-- STICKY HEADER -->
-<header class="site-header">
-  <div class="header-logo">
-    <a href="/"><img src="/escapelogo.png" alt="Escape Pools" /></a>
-  </div>
-  <div class="header-cta">
-    <a href="tel:8328563400" class="btn-call">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      (832) 856-3400
-    </a>
-  </div>
+<header class="hdr">
+  <a href="/" aria-label="Escape Pools home"><img src="/escapelogo.png" alt="Escape Pools" /></a>
+  <a href="tel:8328563400" class="hdr-call">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    (832) 856-3400
+  </a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-img" src="/realresults/realresults-hero.webp" alt="Custom pool built by Escape Pools near Lake Conroe" />
-  <div class="hero-bg"></div>
-
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <div class="hero-badge">
-        <span>&#9733;</span> 4.9 Stars &middot; Serving Lake Conroe &amp; Montgomery County
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow">Lake Conroe &middot; Montgomery County</span>
+      <h1>Your Lake Conroe backyard, <em>designed by hand.</em></h1>
+      <p class="hero-sub">Owner-led custom pools and outdoor living for lakeside homes - Jim designs yours on-site, handles every permit, and finishes many builds in 30-45 days.</p>
+      <div class="hero-rating">
+        <span class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><b>4.9</b> &middot; 25+ Google reviews</span>
+        <span>&middot;</span>
+        <span>Family-owned since 2005</span>
       </div>
-      <h1>Build Your Custom Pool on <em>Lake Conroe</em>.</h1>
-      <p class="hero-sub">
-        Owner-led design and construction for Lake Conroe homeowners - custom inground pools, spas, and outdoor living spaces, with transparent budgets and well-managed build timelines.
-      </p>
-      <div class="google-badge">
-        <img src="https://www.google.com/favicon.ico" alt="Google" />
-        <div>
-          <div class="google-badge-text">4.9/5.0 Google Rating</div>
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        </div>
-      </div>
+      <figure class="hero-figure">
+        <img src="/realresults/realresults-hero.webp" alt="Custom pool by Escape Pools near Lake Conroe" />
+        <figcaption class="hero-cap"><span class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</span> A recent Lake Conroe build</figcaption>
+      </figure>
     </div>
 
-    <!-- FORM CARD (reuses the site-wide "consultation" Netlify form + conversion flow) -->
-    <div class="form-card">
-      <h3>Request Your Free Consultation</h3>
-      <p>No pressure. Budget-transparent. Owner personally responds - usually within 1 hour.</p>
+    <!-- CONVERSION CORE: reuses the site-wide "consultation" Netlify form -->
+    <div class="form-card" data-form-card>
+      <div class="fc-top">
+        <h2>Free design consultation</h2>
+        <span class="fc-pill">Reply &lt; 1 hr</span>
+      </div>
+      <p class="fc-sub">Tell us about your Lake Conroe backyard - Jim personally responds.</p>
 
       <form id="main-form" name="consultation" method="POST" action="/consultation-confirmation/" data-success-url="/consultation-confirmation/" data-netlify="true" netlify data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="consultation" />
         <input type="hidden" name="submission_context" value="lake-conroe-landing" />
         <input type="hidden" name="page_path" value="/lake-conroe/" />
-        <input type="hidden" name="page_title" value="Custom Pools on Lake Conroe | Escape Pools" />
+        <input type="hidden" name="page_title" value="Lake Conroe Custom Pool Builder | Escape Pools" />
         <input type="hidden" name="cta_source" value="lake-conroe-hero" />
         <input type="hidden" name="utm_source" />
         <input type="hidden" name="utm_medium" />
@@ -512,249 +316,266 @@
         <input type="hidden" name="wbraid" />
         <p class="hidden"><label><input name="bot-field" /></label></p>
 
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="John Smith" autocomplete="name" autocapitalize="words" required />
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" autocapitalize="words" placeholder="John Smith" />
         </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel" inputmode="tel" required />
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="(936) 555-0123" />
         </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" inputmode="email" required />
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
         </div>
-
-        <div class="form-group">
-          <label for="interest">What are you looking for?</label>
-          <div class="select-wrapper">
+        <div class="field">
+          <label for="interest">What are you planning?</label>
+          <div class="sel">
             <select id="interest" name="message" required>
-              <option value="" disabled selected>Select one...</option>
-              <option>New Pool Installation</option>
+              <option value="" selected disabled>Select one...</option>
+              <option>New Custom Pool</option>
               <option>Pool + Outdoor Living</option>
-              <option>Pool Remodel or Resurfacing</option>
+              <option>Pool Remodel / Resurfacing</option>
               <option>Not Sure Yet</option>
             </select>
           </div>
         </div>
 
-        <button type="submit" class="btn-submit">Get My Free Consultation &rarr;</button>
-        <p class="form-disclaimer">Complimentary consultation &middot; No obligation &middot; Your information stays private</p>
+        <button type="submit" class="btn-submit">Request My Free Consultation &rarr;</button>
+        <p class="fc-note">Complimentary &amp; no-obligation &middot; <strong>Owner replies, usually within the hour</strong></p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-    Licensed &amp; Insured
-  </div>
-  <div class="trust-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-    Family Owned &amp; Operated
-  </div>
-  <div class="trust-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-    Fast, Well-Managed Timelines
-  </div>
-  <div class="trust-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-    4.9 Stars on Google
+<!-- HAIRLINE TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Licensed &amp; Insured</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Family-Owned &middot; Since 2005</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg> Many pools in 30-45 days</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg> 4.9&#9733; on Google</span>
   </div>
 </div>
 
-<!-- WHY LAKE CONROE -->
-<section class="block">
+<!-- WHY -->
+<section class="s">
   <div class="wrap">
-    <div class="section-label">Why Lake Conroe Homeowners Choose Escape Pools</div>
-    <h2 class="section-title">A backyard that lives up to the lake.</h2>
-    <p class="section-body">
-      Lake Conroe homes deserve outdoor spaces that match the view. We design and build custom pools and outdoor living areas for properties throughout the Lake Conroe area - handling the design, permitting, and construction so you get a finished backyard without the back-and-forth.
-    </p>
+    <div class="kicker">Why homeowners choose us</div>
+    <h2 class="h-sec">A backyard worthy of the lake - <em>built right the first time.</em></h2>
+    <p class="lead">Lake Conroe homes deserve more than a stock pool. We design and build custom pools and outdoor living for lakeside and golf-course lots across Montgomery County - design, permits, and construction, all under one roof.</p>
+    <div class="why">
+      <div class="why-row"><div class="why-num">01</div><div><h3>Owner-led by Jim</h3><p>Jim designs your pool on-site during the first visit - no week-long wait - and stays reachable nights and weekends through the entire build.</p></div></div>
+      <div class="why-row"><div class="why-num">02</div><div><h3>Built for lakeside lots &amp; HOAs</h3><p>Waterfront grades, golf-course communities, and strict HOAs are home turf - Walden, Bentwater, April Sound, Del Lago. We handle the submissions.</p></div></div>
+      <div class="why-row"><div class="why-num">03</div><div><h3>Fast, well-managed builds</h3><p>Long-term crews and tight scheduling mean many pools are finished in 30-45 days - our reviews mention 3- and 4-week completions.</p></div></div>
+      <div class="why-row"><div class="why-num">04</div><div><h3>Transparent budgets</h3><p>Budget-aware planning and clear quote guidance from the first conversation - plus financing options. No surprise change orders.</p></div></div>
+    </div>
+  </div>
+</section>
 
-    <div class="value-grid">
-      <div class="value-card">
-        <h3>Owner-Led, Start to Finish</h3>
-        <p>You work directly with the owner from your first consultation through the final walkthrough - not a rotating crew of subcontractors.</p>
+<!-- OWNER -->
+<section class="s paper2">
+  <div class="wrap owner-grid">
+    <figure class="owner-fig"><img src="/realresults/Screenshot%202026-02-02%20135700.webp" alt="Escape Pools custom pool and spa" /></figure>
+    <div class="owner-quote">
+      <div class="kicker">A promise from the owner</div>
+      <blockquote>"For a big investment like a pool, you should get it done right the first time. I design it with you, I'm on-site, and I'm a phone call away - start to finish."</blockquote>
+      <cite><b>Jim</b> - Owner, Escape Pools &middot; with Jacob &amp; our long-term crews</cite>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="s">
+  <div class="wrap">
+    <div class="kicker">What homeowners say</div>
+    <h2 class="h-sec">Real pools. Real Lake Conroe-area families.</h2>
+    <div class="reviews">
+      <div class="rev">
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Completing my pool in 3 weeks - Jim and Jacob are easy to reach with any questions. So glad I trusted them."</p>
+        <div class="rev-who"><div class="rev-av">E</div><div><div class="rev-name">Ena Jeter</div><div class="rev-loc">Conroe, TX</div></div></div>
+        <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
       </div>
-      <div class="value-card">
-        <h3>Transparent Budgets</h3>
-        <p>Clear, budget-aware planning and quote guidance from the very first conversation. No surprise change orders.</p>
+      <div class="rev">
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The most knowledgeable, professional and trustworthy of everyone we met. Enjoying our pool after only 4 weeks!"</p>
+        <div class="rev-who"><div class="rev-av">A</div><div><div class="rev-name">Aliana Wynn</div><div class="rev-loc">The Woodlands, TX</div></div></div>
+        <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
       </div>
-      <div class="value-card">
-        <h3>Built for the Lake Conroe Lifestyle</h3>
-        <p>Pools, spas, and outdoor kitchens designed for how you actually use your backyard - from quiet mornings to lakeside entertaining.</p>
+      <div class="rev">
+        <div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Jim is super methodical, incredibly seasoned - the end product shows it. He handled permits and stayed on timeline."</p>
+        <div class="rev-who"><div class="rev-av">F</div><div><div class="rev-name">Familia De Leon</div><div class="rev-loc">Greater Houston, TX</div></div></div>
+        <span class="rev-g"><img src="https://www.google.com/favicon.ico" alt="Google" /> Google Review</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK — alternating editorial feature blocks -->
+<section class="s paper2">
+  <div class="wrap">
+    <div class="kicker">Recent work</div>
+    <h2 class="h-sec">Custom pools &amp; outdoor living, <em>made for the lake.</em></h2>
+
+    <div class="feat rev">
+      <figure class="feat-fig"><img src="/realresults/Screenshot%202026-02-02%20135927.webp" alt="Custom pool and spa near Lake Conroe" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">Pools &amp; Spas</div>
+        <h3>Shaped to your lot and your view</h3>
+        <p>Raised spas, tanning ledges, negative edges - designed around your slope, your sightlines to the water, and how your family actually wants to use the pool.</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <figure class="feat-fig"><img src="/assets/legacy-gallery/legacy-covered-patio.jpg" alt="Covered patio and outdoor living area" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">Outdoor Living</div>
+        <h3>The whole backyard, <em>under one roof</em></h3>
+        <p>Outdoor kitchens, covered patios, and pergolas built in the same project as your pool - one team, one timeline, one finished space to enjoy.</p>
+      </div>
+    </div>
+
+    <div class="feat rev">
+      <figure class="feat-fig"><img src="/assets/legacy-gallery/legacy-dusk-cabana.jpg" alt="Pool and cabana lit at dusk" loading="lazy" /></figure>
+      <div class="feat-body">
+        <div class="feat-tag">The Details</div>
+        <h3>Built to glow after sunset</h3>
+        <p>Lighting, water features, and finishes chosen so your backyard looks as good at 9pm as it does at noon - the difference between a pool and an escape.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
-<section class="block alt">
+<section class="s">
   <div class="wrap">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">From first call to finished pool.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <div class="step-title">Free Consultation</div>
-          <div class="step-desc">We review your goals, must-haves, and budget, then recommend the best next step for your Lake Conroe property.</div>
-        </div>
+    <div class="kicker">How it works</div>
+    <h2 class="h-sec">From first call to first swim.</h2>
+    <div class="timeline">
+      <div class="tl"><div class="tl-dot">1</div><div><h3>Free in-home consultation</h3><p>Jim comes to your Lake Conroe home and designs your pool on-site - real ideas and direction in the first meeting.</p></div></div>
+      <div class="tl"><div class="tl-dot">2</div><div><h3>Design &amp; permitting</h3><p>We handle HOA submissions, county and city permits, and design finalization. Zero bureaucratic headaches for you.</p></div></div>
+      <div class="tl"><div class="tl-dot">3</div><div><h3>Owner-supervised build</h3><p>Same long-term crews, no gaps, no delays. Many projects completed in 30-45 days.</p></div></div>
+      <div class="tl"><div class="tl-dot">4</div><div><h3>Walkthrough &amp; pool school</h3><p>Jim personally walks you through everything so you know how to enjoy and care for your new pool.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE BAND -->
+<section class="s paper2">
+  <div class="wrap">
+    <div class="band">
+      <div class="band-card fin">
+        <h3>Financing available</h3>
+        <p>We partner with HFS Financial and other trusted lenders for competitive monthly payments designed around your project and budget.</p>
+        <a href="#main-form" class="btn-line" onclick="return scrollToMainForm(event)">Ask about monthly payments</a>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <div class="step-title">Design &amp; Permitting</div>
-          <div class="step-desc">We handle HOA submissions, county and city permits, and design finalization - zero bureaucratic headaches for you.</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <div class="step-title">Build &amp; Enjoy</div>
-          <div class="step-desc">Owner-managed construction on a tight, well-communicated timeline, ending with a backyard ready to enjoy.</div>
-        </div>
+      <div class="band-card">
+        <h3>&#127482;&#127480; Heroes Program</h3>
+        <p>Special savings for military, veterans, first responders, teachers, and healthcare workers. Ask when you schedule your consultation.</p>
+        <a href="#main-form" class="btn-line" onclick="return scrollToMainForm(event)">Claim your discount</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="block">
+<!-- FAQ -->
+<section class="s">
   <div class="wrap">
-    <div class="quote-card">
-      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <blockquote>"Escape Pools didn't just build us a pool - they created our family's favorite place."</blockquote>
-      <cite>- Sarah M., The Woodlands</cite>
+    <div class="kicker">Common questions</div>
+    <h2 class="h-sec">Everything you need to know.</h2>
+    <div class="faq">
+      <details><summary>How involved is Jim during construction?</summary><div class="ans">Jim personally oversees every project on-site - coordinating crews and answering questions as the build moves forward. You can reach him directly, nights and weekends.</div></details>
+      <details><summary>Is the 30-45 day timeline realistic?</summary><div class="ans">Yes - and our reviews confirm it, with several customers referencing 3- to 4-week completions. It's possible because of our long-term crews and tight scheduling. Weather can affect timelines, but we plan around it.</div></details>
+      <details><summary>Do you handle HOA approvals and permits on Lake Conroe?</summary><div class="ans">We do - including the stricter lakeside and golf-course communities. We manage HOA submissions plus county and city permits so you don't have to.</div></details>
+      <details><summary>Can you work with my budget?</summary><div class="ans">We give budget-aware planning and clear quote guidance from the first conversation, and offer financing options so you can build on your terms.</div></details>
+      <details><summary>Do you offer warranties?</summary><div class="ans">All materials and equipment are backed by manufacturer warranties, and we support you with any warranty claims after the build.</div></details>
     </div>
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section class="block alt">
+<!-- AREAS -->
+<section class="s paper2">
   <div class="wrap">
-    <div class="section-label">Lake Conroe Service Area</div>
-    <h2 class="section-title">Proudly serving the Lake Conroe communities.</h2>
-    <p class="section-body">We build custom pools and outdoor living spaces for homeowners across Lake Conroe and the surrounding Montgomery County communities.</p>
-    <div class="areas">
-      <span class="area-pill">Conroe</span>
-      <span class="area-pill">Montgomery</span>
-      <span class="area-pill">Willis</span>
-      <span class="area-pill">Walden</span>
-      <span class="area-pill">Bentwater</span>
-      <span class="area-pill">April Sound</span>
-      <span class="area-pill">Del Lago</span>
-      <span class="area-pill">Point Aquarius</span>
-      <span class="area-pill">Corinthian Point</span>
-      <span class="area-pill">The Woodlands</span>
+    <div class="kicker">Lake Conroe service area</div>
+    <h2 class="h-sec">Proudly serving the Lake Conroe communities.</h2>
+    <p class="lead">Custom pools and outdoor living for homeowners across Lake Conroe and Montgomery County.</p>
+    <div class="pills">
+      <span class="pill">Conroe</span><span class="pill">Montgomery</span><span class="pill">Willis</span>
+      <span class="pill">Walden</span><span class="pill">Bentwater</span><span class="pill">April Sound</span>
+      <span class="pill">Del Lago</span><span class="pill">Point Aquarius</span><span class="pill">Corinthian Point</span>
+      <span class="pill">The Woodlands</span>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="block final-cta">
+<section class="s final">
   <div class="wrap">
-    <h2 class="section-title">Ready to design your Lake Conroe escape?</h2>
-    <p class="section-body">Request your free, no-obligation consultation. The owner personally responds - usually within the hour.</p>
-    <a href="#main-form" class="btn-primary" onclick="return scrollToMainForm(event)">Request My Free Consultation</a>
+    <h2 class="h-sec">Ready to design your <em>Lake Conroe escape?</em></h2>
+    <p class="lead">Request your free, no-obligation consultation. The owner personally responds - usually within the hour.</p>
+    <div class="final-btns">
+      <a href="#main-form" class="btn-primary" onclick="return scrollToMainForm(event)">Request My Free Consultation</a>
+      <a href="tel:8328563400" class="btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call (832) 856-3400
+      </a>
+    </div>
   </div>
 </section>
 
 <footer>
-  <div>Escape Pools &middot; Custom Pools &amp; Outdoor Living &middot; Lake Conroe &amp; Greater Houston</div>
-  <div><a href="tel:8328563400">(832) 856-3400</a></div>
+  <img src="/escapelogo.png" alt="Escape Pools" />
+  <p>Escape Pools &middot; Custom Pools &amp; Outdoor Living &middot; Lake Conroe &amp; Montgomery County</p>
+  <p>&copy; 2026 Escape Pools &amp; Spas. All rights reserved. &middot; <a href="https://www.escapepools.com/privacy-policy/">Privacy Policy</a></p>
 </footer>
 
-<!-- Hidden static form so Netlify reliably detects all fields at build time -->
+<!-- STICKY MOBILE CTA -->
+<div class="mbar">
+  <a href="tel:8328563400" class="m-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Call</a>
+  <a href="#main-form" class="m-quote" onclick="return scrollToMainForm(event)">Free Consultation</a>
+</div>
+
+<!-- Hidden static form so Netlify detects all fields at build -->
 <form name="consultation" data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
   <input type="hidden" name="form-name" value="consultation" />
-  <input type="text" name="name" />
-  <input type="tel" name="phone" />
-  <input type="email" name="email" />
-  <input type="text" name="message" />
-  <input type="text" name="submission_context" />
-  <input type="text" name="page_path" />
-  <input type="text" name="page_title" />
-  <input type="text" name="cta_source" />
-  <input type="text" name="utm_source" />
-  <input type="text" name="utm_medium" />
-  <input type="text" name="utm_campaign" />
-  <input type="text" name="utm_term" />
-  <input type="text" name="utm_content" />
-  <input type="text" name="gclid" />
-  <input type="text" name="gbraid" />
-  <input type="text" name="wbraid" />
+  <input type="text" name="name" /><input type="tel" name="phone" /><input type="email" name="email" /><input type="text" name="message" />
+  <input type="text" name="submission_context" /><input type="text" name="page_path" /><input type="text" name="page_title" /><input type="text" name="cta_source" />
+  <input type="text" name="utm_source" /><input type="text" name="utm_medium" /><input type="text" name="utm_campaign" /><input type="text" name="utm_term" /><input type="text" name="utm_content" />
+  <input type="text" name="gclid" /><input type="text" name="gbraid" /><input type="text" name="wbraid" />
 </form>
 
 <script>
-  function scrollToMainForm(event) {
-    if (event) event.preventDefault();
-    var form = document.getElementById("main-form");
-    var card = form ? form.closest(".form-card") : null;
-    var target = card || form;
-    if (!target) return false;
-    var headerOffset = window.innerWidth < 768 ? 84 : 110;
-    var top = Math.max(target.getBoundingClientRect().top + window.scrollY - headerOffset, 0);
-    window.scrollTo({ top: top, behavior: "smooth" });
-    window.setTimeout(function () {
-      var nameField = document.getElementById("name");
-      if (nameField) nameField.focus({ preventScroll: true });
-    }, 450);
+  function scrollToMainForm(e){
+    if(e)e.preventDefault();
+    var f=document.getElementById('main-form');
+    var t=(f&&f.closest('.form-card'))||f;
+    if(!t)return false;
+    var o=window.innerWidth<768?84:100;
+    var top=Math.max(t.getBoundingClientRect().top+window.scrollY-o,0);
+    window.scrollTo({top:top,behavior:'smooth'});
+    setTimeout(function(){var n=document.getElementById('name');if(n)n.focus({preventScroll:true});},450);
     return false;
   }
 
-  window.addEventListener("DOMContentLoaded", function () {
-    var trackingKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid"];
-    var queryParams = new URLSearchParams(window.location.search);
-    var mainForm = document.getElementById("main-form");
-
-    function readTrackingValue(key) {
-      var storageKey = "escape_" + key;
-      var queryValue = queryParams.get(key);
-      if (queryValue) {
-        try { window.localStorage.setItem(storageKey, queryValue); } catch (error) {}
-        return queryValue;
-      }
-      try { return window.localStorage.getItem(storageKey) || ""; } catch (error) { return ""; }
-    }
-
-    function applyTrackingFields(form) {
-      if (!form) return;
-      trackingKeys.forEach(function (key) {
-        var input = form.querySelector('input[name="' + key + '"]');
-        if (input) input.value = readTrackingValue(key);
-      });
-    }
-
-    if (!mainForm) return;
-    applyTrackingFields(mainForm);
-
-    mainForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var formData = new FormData(mainForm);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-        .then(function () {
-          mainForm.reset();
-          if (typeof gtag === "function") {
-            gtag("event", "consultation_form_submit", {
-              page_location: window.location.href,
-              cta_source: "lake-conroe-hero"
-            });
-          }
-          window.location.assign("/consultation-confirmation/");
+  window.addEventListener('DOMContentLoaded',function(){
+    var keys=['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','gbraid','wbraid'];
+    var q=new URLSearchParams(window.location.search);
+    var form=document.getElementById('main-form');
+    function rv(k){var sk='escape_'+k;var v=q.get(k);if(v){try{localStorage.setItem(sk,v);}catch(e){}return v;}try{return localStorage.getItem(sk)||'';}catch(e){return '';}}
+    if(!form)return;
+    keys.forEach(function(k){var i=form.querySelector('input[name="'+k+'"]');if(i)i.value=rv(k);});
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var fd=new FormData(form);
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
+        .then(function(){
+          form.reset();
+          if(typeof gtag==='function'){gtag('event','consultation_form_submit',{page_location:window.location.href,cta_source:'lake-conroe-hero'});}
+          window.location.assign('/consultation-confirmation/');
         })
-        .catch(function () {
-          mainForm.submit();
-        });
+        .catch(function(){form.submit();});
     });
   });
 </script>
